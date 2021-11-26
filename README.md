@@ -20,7 +20,7 @@ Click here to see the ChatBot in action.
 
 ## Group details
 
-**Group number:** 16
+**Group number:** 6
 
 **Group members:**
 
