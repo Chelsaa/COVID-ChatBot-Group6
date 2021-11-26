@@ -31,7 +31,3 @@ Click here to see the ChatBot in action.
 | 4. | Soumitra | India |
 | 5. | Shivam | India |
 | 6. | Tanishq Soni | India |
-
-<small>
-**COVID 19 CHATBOT. NCU-UAG COLLABORATIVE C PROJECT. GROUP 16. COPYRIGHT © GROUP 16.**
-</small>
