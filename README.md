@@ -26,7 +26,7 @@ Click here to see the ChatBot in action.
 
 | S.No | Name | Country |
 | --- | --- | --- | 
-| 1. | Miguel Angel Romo Martinez | Mexico |
+| 1. | Manuel Alejandro Rico Navarro | Mexico |
 | 2. | Montserrat Dueñas Conchas | Mexico |
 | 3. | Raveesh Yadav | India |
 | 4. | Soumitra | India |
