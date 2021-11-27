@@ -15,10 +15,10 @@ int homecare_1()
     switch (input)
     {
     case 1:
-        puts("Ans. \u2022Oxygen saturation of 92%% or 93%% should not be considered critical");
+        printf("Ans. Oxygen saturation of 92%% or 93%% should not be considered critical");
         break;
     case 2:
-        puts("Ans. These includes:\n\n• Trouble breathing\n• Persistent chest pain or pressure\n• New confusion\n• Bluish lips or face\n• Inability to stay awake\n• Pale, grey or blue-coloured skin, lips, or nail beds — depending on skin tone");
+        printf("Ans. These includes:\n\n• Trouble breathing\n• Persistent chest pain or pressure\n• New confusion\n• Bluish lips or face\n• Inability to stay awake\n• Pale, grey or blue-coloured skin, lips, or nail beds — depending on skin tone");
         break;
     case 3:
         printf("Ans. Follow the following statements to prevent the spread of infection:\n\n• Stay home from work, school and public areas unless it's to get medical care.\n• Avoid using public transportation, ride-sharing services or taxis.\n• Stay isolated in one room, away from your family and other people, as much as possible.\n• Wear a face mask when near others.\n• Avoid sharing personal household items, such as dishes, towels, bedding and electronics.\n• Frequently wash your hands with soap and water for at least 20 seconds.");
