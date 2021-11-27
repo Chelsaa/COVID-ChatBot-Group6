@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-int main()
+int homecare_1()
 {
     int input;
     char boolean;
