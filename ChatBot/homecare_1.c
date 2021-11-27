@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-int homeCare_1()
+int homecare_1()
 {
     int input;
     printf("\nChoose questions from Home Care Category listed below\n\n\n");
