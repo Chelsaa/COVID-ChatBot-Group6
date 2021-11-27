@@ -5,6 +5,7 @@
 */
 
 #include <stdio.h>
+#include "homecare_1.c"
 
 int main(){
     int userInput;
@@ -33,7 +34,7 @@ int main(){
         // Running the home care question script if the user input is 2
 
         else if (userInput == 2){
-            printf("Home care script");
+            homeCare_1();
             break;
         }
 
