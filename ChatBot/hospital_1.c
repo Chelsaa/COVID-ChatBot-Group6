@@ -10,7 +10,7 @@ int hospital_1()
 {
     int input;
     printf("\nChoose questions from Home Hospital listed below\n\n\n");
-    printf("1. Till what minimum oxygen saturation level value can covid patients be treated at home?\n2. Is a negative covid test report required to visit the hospital for other OPD?\n3. Which preventions can help to prevent the spread of infection with the COVID-19 virus?\n4. When we can help up with ending isolation or quarantine of any person at home?\n5. Can we stay with COVID Patients at home?\n6. Advice for health workers providing care in a private home.\n7. When and how to clean surfaces and objects?\n8. Emergency Number to call, when having trouble in breathing?\n9. Precautionary measures for yourself while caring for someone with COVID-19.\n10. How we can cope with caregiving stress?\n\nEnter the number residing with your question : ");
+    printf("1. Which hospital has vacant beds within 10 km of the city?\n2. Is a negative covid test report required to visit the hospital for other OPD?\n3. Which preventions can help to prevent the spread of infection with the COVID-19 virus?\n4. When we can help up with ending isolation or quarantine of any person at home?\n5. Can we stay with COVID Patients at home?\n6. Advice for health workers providing care in a private home.\n7. When and how to clean surfaces and objects?\n8. Emergency Number to call, when having trouble in breathing?\n9. Precautionary measures for yourself while caring for someone with COVID-19.\n10. How we can cope with caregiving stress?\n\nEnter the number residing with your question : ");
     scanf("%d", &input);
     switch (input)
     {
