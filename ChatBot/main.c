@@ -1,9 +1,3 @@
-/* COVID 19 CHATBOT
- * NCU-UAG COLLABORATIVE C PROJECT
- * GROUP: 16
- * COPYRIGHT © GROUP 6
-*/
-
 #include <stdio.h>
 #include "homecare_1.c"
 
@@ -34,7 +28,7 @@ int main(){
         // Running the home care question script if the user input is 2
 
         else if (userInput == 2){
-            homeCare_1();
+            homecare_1();
             break;
         }
 
