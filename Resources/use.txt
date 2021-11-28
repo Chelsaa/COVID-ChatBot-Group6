@@ -1,1 +1,0 @@
-This folder will be used to keep all resource files like images etc.
