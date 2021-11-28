@@ -9,7 +9,7 @@
 // Defining the meditation function which replies
 // to queries regarding food and meditation questions.
 
-int main()
+int meditation()
 {
     int input;
     char boolean;
