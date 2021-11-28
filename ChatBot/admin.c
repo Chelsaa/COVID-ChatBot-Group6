@@ -35,7 +35,7 @@ void adminRegistration(){
 
         else{
             fprintf(fptr, "%s %d\n", username, pin);    // Dumping all fetched details into "loginData.txt" file
-            printf("Admin added succesfully!!!")
+            printf("Admin added succesfully!!!");
         }
     }   
     fclose(fptr);
