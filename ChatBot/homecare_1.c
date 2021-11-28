@@ -163,7 +163,7 @@ cont:
         }
         break;
     default:
-        printf("\n>>> Choose number corresponding to the relevant question\n");
+        printf("\n>> Choose number corresponding to the relevant question\n");
         goto cont;
     }
     return 0;
