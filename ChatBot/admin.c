@@ -35,6 +35,7 @@ void adminRegistration(){
 
         else{
             fprintf(fptr, "%s %d\n", username, pin);    // Dumping all fetched details into "loginData.txt" file
+            printf("Admin added succesfully!!!")
         }
     }   
     fclose(fptr);
@@ -74,9 +75,4 @@ void adminPortal(){
     else{
         printf("Incorrect\n");
     }
-}
-
-int main(){
-    adminPortal();
-    return 0;
 }
