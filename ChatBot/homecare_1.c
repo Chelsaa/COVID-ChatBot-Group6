@@ -6,11 +6,15 @@
 
 #include <stdio.h>
 
+// Defining the homecare_1 function which replies
+// to queries regarding homecare questions.
+
 int homecare_1()
 {
     int input;
     char boolean;
-    printf("\nChoose questions from Home Care Category listed below\n\n");
+
+    printf("\n=====Choose questions from Home Care Category listed below=====\n\n");
 cont:
     printf("\n");
     printf("1. Till what minimum oxygen saturation level value can covid patients be treated at home?\n2. What are the emergency warning signs can be experienced for COVID Patients?\n3. Which preventions can help to prevent the spread of infection with the COVID-19 virus?\n4. When we can help up with ending isolation or quarantine of any person at home?\n5. Can we stay with COVID Patients at home?\n6. Advice for health workers providing care in a private home.\n7. When and how to clean surfaces and objects?\n8. Emergency Number to call, when having trouble in breathing?\n9. Precautionary measures for yourself while caring for someone with COVID-19.\n10. How we can cope with caregiving stress?\n\nEnter the number residing with your question : ");
