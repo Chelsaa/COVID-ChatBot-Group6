@@ -1,3 +1,9 @@
+/* COVID 19 CHATBOT
+ * NCU-UAG COLLABORATIVE C PROJECT
+ * GROUP: 6
+ * COPYRIGHT © GROUP 6
+*/
+
 #include <stdio.h>
 #include "homecare_1.c" // Importing the homecare script
 #include "hospital_1.c" // Importing the hospital script
