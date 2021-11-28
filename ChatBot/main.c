@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include "homecare_1.c" // Importing the homecare script
 #include "hospital_1.c" // Importing the hospital script
+#include "admin.c" // Importing admin portal script
 
 int main(){
     int userInput;
@@ -15,7 +16,7 @@ int main(){
     // The home page consists of main menu and title.
 
     printf("\n=====COVID-19 Chat-Bot=====\n");
-    printf("\nMAIN MENU\n\n1. Hospital related queries\n2. Home care related queries\n3. Food and medicine");
+    printf("\nMAIN MENU\n\n1. Hospital related queries\n2. Home care related queries\n3. Food and medicine\n4. Admin login");
     printf("\n\nEnter your choice to proceed: ");
     scanf("%d", &userInput);
 
@@ -23,7 +24,7 @@ int main(){
     // If input is not any of the mentioned number, the loop will
     // end the user will automatically exit the bot.
 
-    while (userInput == 1 || userInput == 2 || userInput == 3){
+    while (userInput == 1 || userInput == 2 || userInput == 3 || userInput == 4){
         
         // Running the hospital questions script if user input is 1 
         
@@ -43,6 +44,13 @@ int main(){
 
         else if (userInput == 3){
             printf("Food and medicine script");
+            break;
+        }
+
+        // Admin portal
+
+        else if (userInput == 4){
+            adminPortal();
             break;
         }
 
