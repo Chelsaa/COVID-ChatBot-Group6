@@ -1,65 +1,75 @@
 /* COVID 19 CHATBOT
- * NCU-UAG COLLABORATIVE C PROJECT
- * GROUP: 6
- * COPYRIGHT © GROUP 6
+   NCU-UAG COLLABORATIVE C PROJECT
+   GROUP: 6
+   COPYRIGHT © GROUP 6
 */
 
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include <string.h> // For strcmp()
 
 void adminRegistration(){
     
-    char username[8], getUsername[8], getPin[5], boolean; int pin;
-    FILE *fptr;
+    char username[100], getUsername[100], getPin[5]; int pin;
+    FILE *fptr; // File pointer
 
+    // Opening the txt file having login data
     fptr = fopen("loginData.txt", "a+");
 
     if (fptr == NULL){
-        printf("Error");
+        printf("Error");    // Printing error if file does not exists
     }
     else{
     adminRegister:
-        printf("Enter the userid: ");
+        printf("Enter 8 digit userID: ");   // Requesting for a uniform 8 digit userId for registration
         scanf("%s", username);
 
-        printf("Enter the password: ");
+        printf("Enter a 4 digit login PIN: ");  // Requesting a uniform 4 digit PIN
         scanf("%d", &pin);
 
         fscanf(fptr, "%s %s", getUsername, getPin);
 
-        if ((strcmp(username, getUsername) == 0 && (strcmp(pin, getPin)) == 0)){
-            printf("Username already taken. Please try again.");
+        if ((strcmp(username, getUsername) == 0)){
+            printf("Username already taken. Please try again.");    // Printing an error in case the user ID is already taken
             goto adminRegister;
         }
 
         else{
-            fprintf(fptr, "%s %d\n", username, pin);
-            printf("New admin registered succesfully!!! Do you want to add another admin? (y/n): ");
-            scanf("%c", &boolean);
-            if (boolean == 'y'){
-                goto adminRegister;
-            }
+            fprintf(fptr, "%s %d\n", username, pin);    // Dumping all fetched details into "loginData.txt" file
         }
     }   
     fclose(fptr);
 }
 
-void adminLogin(){
-    char username[8], getUname[8], getPin[8], pin[8];
-    FILE *fptr;
+void adminMainMenu(){
+
+    int userChoice;
+    printf("\n=====MAIN MENU=====\n\n1. Add a new admin\n\n Your choice: ");
+    scanf("%d", &userChoice);
+
+    if (userChoice == 1){
+        printf("\n=====NEW ADMIN REGISTRATION=====\n\n");
+        adminRegistration();
+    }
+}
+
+void adminPortal(){
+
+    char userID[8], getUID[8], getPin[8], pin[8];
+    FILE *fptr; // File pointer
 
     fptr = fopen("loginData.txt", "r");
-    fscanf(fptr, "%s %s", getUname, getPin);
+    fscanf(fptr, "%s %s", getUID, getPin);    // Reading userID and password from the file
 
-    printf("Enter username: ");
-    scanf("%s", username);
+    printf("\n=====ADMIN PORTAL LOGIN=====\n\n");
+    printf("Enter userID: "); // Requesting for userID from the user
+    scanf("%s", userID);
 
-    printf("Enter password: ");
+    printf("Enter PIN: "); // Requesting for the PIN from the user
     scanf("%s", pin);
 
-    if ((strcmp(username, getUname) == 0 && (strcmp(pin, getPin)) == 0)){
+    if ((strcmp(userID, getUID) == 0 && (strcmp(pin, getPin)) == 0)){
         printf("Login succesful!!!");
+        adminMainMenu();
     }
     else{
         printf("Incorrect\n");
@@ -67,6 +77,6 @@ void adminLogin(){
 }
 
 int main(){
-    adminRegistration();
+    adminPortal();
     return 0;
 }
