@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include "homecare_1.c"
+#include "homecare_1.c" // Importing the homecare script
+#include "hospital_1.c" // Importing the hospital script
 
 int main(){
     int userInput;
@@ -21,7 +22,7 @@ int main(){
         // Running the hospital questions script if user input is 1 
         
         if (userInput == 1){
-            printf("Hospital script");
+            hospital_1();
             break;
         }
 
