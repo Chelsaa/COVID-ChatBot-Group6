@@ -9,7 +9,7 @@
 
 void adminRegistration(){
     
-    char username[100], getUsername[100], getPin[5]; int pin;
+    char username[8], getUsername[8], getPin[4]; int pin;
     FILE *fptr; // File pointer
 
     // Opening the txt file having login data
@@ -41,10 +41,11 @@ void adminRegistration(){
     fclose(fptr);
 }
 
+// Designing the main menu of the admin portal
 void adminMainMenu(){
 
     int userChoice;
-    printf("\n=====MAIN MENU=====\n\n1. Add a new admin\n\n Your choice: ");
+    printf("\n=====MAIN MENU=====\n\n1. Add a new admin\n\nYour choice: ");
     scanf("%d", &userChoice);
 
     if (userChoice == 1){
@@ -55,12 +56,12 @@ void adminMainMenu(){
 
 void adminPortal(){
 
-    char userID[8], getUID[8], getPin[8], pin[8];
+    char userID[8], getUID[8], getPin[4], pin[4]; int flag = 0;
     FILE *fptr; // File pointer
 
-    fptr = fopen("loginData.txt", "r");
+    fptr = fopen("loginData.txt", "a+");
     fscanf(fptr, "%s %s", getUID, getPin);    // Reading userID and password from the file
-
+adminLogin:
     printf("\n=====ADMIN PORTAL LOGIN=====\n\n");
     printf("Enter userID: "); // Requesting for userID from the user
     scanf("%s", userID);
@@ -72,7 +73,18 @@ void adminPortal(){
         printf("Login succesful!!!");
         adminMainMenu();
     }
+
+    // A user has maximum of 3 attempts to login.
+    // In case the user reaches maximum attempts,
+    // the loop breaks and user will have to run 
+    // the bot again.
+
     else{
-        printf("Incorrect\n");
+        flag += 1;
+        while (flag < 3){
+            printf("Incorrect input. Please try again.\n\n");
+            goto adminLogin;
+        }
+        printf("Maximum attempts reached. Please try again later.");
     }
 }
