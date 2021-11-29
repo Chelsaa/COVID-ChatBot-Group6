@@ -34,7 +34,7 @@ cont:
         }
         break;
     case 2:
-        printf("Ans. These includes:\n\n# Trouble breathing\n# Persistent chest pain or pressure\n# New confusion\n# Bluish lips or face\n# Inability to stay awake\n# Pale, grey or blue-coloured skin, lips, or nail beds — depending on skin tone");
+        printf("Ans. These includes:\n\n# Trouble breathing\n# Persistent chest pain or pressure\n# New confusion\n# Bluish lips or face\n# Inability to stay awake\n# Pale, grey or blue-coloured skin, lips, or nail beds (depending on skin tone");
         printf("\n\nAny more queries?(y/n) : ");
         scanf(" %c", &boolean);
         if (boolean == 'y')
