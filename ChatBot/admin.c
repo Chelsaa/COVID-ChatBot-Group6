@@ -9,11 +9,11 @@
 
 void adminRegistration(){
     
-    char username[8], getUsername[8], getPin[4]; int pin;
+    char username[8], getUsername[8], getPin[4], pin[4];
     FILE *fptr; // File pointer
 
     // Opening the txt file having login data
-    fptr = fopen("loginData.txt", "a+");
+    fptr = fopen("adminData.txt", "a+");
 
     if (fptr == NULL){
         printf("Error");    // Printing error if file does not exists
@@ -24,7 +24,7 @@ void adminRegistration(){
         scanf("%s", username);
 
         printf("Enter a 4 digit login PIN: ");  // Requesting a uniform 4 digit PIN
-        scanf("%d", &pin);
+        scanf("%s", pin);
 
         fscanf(fptr, "%s %s", getUsername, getPin);
 
@@ -34,7 +34,7 @@ void adminRegistration(){
         }
 
         else{
-            fprintf(fptr, "%s %d\n", username, pin);    // Dumping all fetched details into "loginData.txt" file
+            fprintf(fptr, "%s %s\n", username, pin);    // Dumping all fetched details into "loginData.txt" file
             printf("Admin added succesfully!!!");
         }
     }   
@@ -59,7 +59,7 @@ void adminPortal(){
     char userID[8], getUID[8], getPin[4], pin[4]; int flag = 0;
     FILE *fptr; // File pointer
 
-    fptr = fopen("loginData.txt", "a+");
+    fptr = fopen("adminData.txt", "a+");
     fscanf(fptr, "%s %s", getUID, getPin);    // Reading userID and password from the file
 adminLogin:
     printf("\n=====ADMIN PORTAL LOGIN=====\n\n");
@@ -87,4 +87,5 @@ adminLogin:
         }
         printf("Maximum attempts reached. Please try again later.");
     }
+    fclose(fptr);
 }
