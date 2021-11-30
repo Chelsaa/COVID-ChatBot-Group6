@@ -5,9 +5,9 @@
 */
 
 #include <stdio.h>
-#include "hospital_1.c" // Importing the hospital script
-#include "homecare_1.c" // Importing the homecare script
-#include "food-and-meditation_1.c" // Importing food and meditation script
+#include "hospital.c" // Importing the hospital script
+#include "homecare.c" // Importing the homecare script
+#include "food-and-meditation.c" // Importing food and meditation script
 #include "admin.c" // Importing admin portal script
 
 int main(){
