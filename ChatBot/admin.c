@@ -59,7 +59,7 @@ void adminPortal(){
     char userID[8], getUID[8], getPin[4], pin[4]; int flag = 0;
     FILE *fptr; // File pointer
 
-    fptr = fopen("adminData.txt", "a+");
+    fptr = fopen("adminData.txt", "r");
     fscanf(fptr, "%s %s", getUID, getPin);    // Reading userID and password from the file
 adminLogin:
     printf("\n=====ADMIN PORTAL LOGIN=====\n\n");
