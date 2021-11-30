@@ -20,7 +20,7 @@ int meditation()
     printf("\n=====Choose questions from Food and Meditation Category listed below=====\n\n");
 cont:
     printf("\n");
-    printf("1. What are the best food to improve immunity?\n2. Suggest any good medicine for High fever.\n3. Suggest any good medicine for Running Nose (Rhinorrhea).\n4. Suggest any good medicine for Migraine Headache.\n5. Suggest any good medicine for Body Pain.\n6. Suggest any good medicine for difficulty in breathing.\n7. Why do we need Monoclonal Antibody?\n8. Can I get coronavirus from food,food packaging or food containers and preparation area?\n9. To whom I should contact with Drug-Related questions?\n10. Nutrition guidelines for adults during the COVID-19 outbreak.\n\nEnter the number residing with your question : ");
+    printf("1. What are the best food to improve immunity?\n2. Suggest any good medicine for High fever.\n3. Suggest any good medicine for Running Nose (Rhinorrhea).\n4. Suggest any good medicine for Migraine Headache.\n5. Suggest any good medicine for Body Pain.\n6. Suggest any good medicine for difficulty in breathing.\n7. Why do we need Monoclonal Antibody?\n8. Can I get coronavirus from food,food packaging or food containers and preparation area?\n9. To whom I should contact with Drug-Related questions?\n10. Nutrition guidelines for adults during the COVID-19 outbreak.\n11. If a worker in my food processing facility/farm has tested positive for COVID-19, Should I close the facility? If so, for how long?\n12. What are some ways to maintain a healthy diet during the COVID-19 pandemic?\n13. What treatments are available for COVID-19\n14. Can i make my own hand sanitiser?\n15. What do i do if i get a rash or other reaction to hand sanitiser?\n\nEnter the number residing with your question : ");
     scanf("%d", &input);
     switch (input)
     {
@@ -110,6 +110,51 @@ cont:
         break;
     case 10:
         printf("Ans. Proper nutrition and hydration are vital. People who eat a well-balanced diet tend to be healthier with stronger immune systems and lower risk of chronic illnesses and infectious diseases. So you should eat a variety of fresh and unprocessed foods every day to get the vitamins, minerals, dietary fibre, protein and antioxidants your body needs. Drink enough water. Avoid sugar, fat and salt to significantly lower your risk of overweight, obesity, heart disease, stroke, diabetes and certain types of cancer.\n# Eat fruits, vegetables, legumes (e.g. lentils, beans), nuts and whole grains.\n# Daily, eat: 2 cups of fruit (4 servings), 2.5 cups of vegetables (5 servings), 180 g of grains, and 160 g of meat and beans.\n# For snacks, choose raw vegetables and fresh fruit rather than foods that are high in sugar, fat or salt.\n# Do not overcook vegetables and fruit as this can lead to the loss of important vitamins.\n# When using canned or dried vegetables and fruit, choose varieties without added salt or sugar.\n# Drink enough water every day");
+        printf("\n\nAny more queries?(y/n) : ");
+        scanf(" %c", &boolean);
+        if (boolean == 'y')
+        {
+            goto cont;
+        }
+        break;
+    case 11:
+        printf("Ans. Food facilities need to follow protocols set by local and state health departments, which may vary depending on the amount of community spread of COVID-19 in a given area. These decisions will be based on public health risk of person-to-person transmission not based on food safety.");
+        printf("\n\nAny more queries?(y/n) : ");
+        scanf(" %c", &boolean);
+        if (boolean == 'y')
+        {
+            goto cont;
+        }
+        break;
+    case 12:
+        printf("Ans. Every day, eat a combination of different foods including whole grains such as wheat, maize and rice, legumes like lentils and beans, fruit and vegetables and some foods from animal sources (e.g. meat, fish, eggs and milk).\nEat plenty of fruit and vegetables:\n\n● Eat fresh fruit and vegetables that are in season.\n● Eat a variety of fruit and vegetables.\n\nKeep salt intake to less than 5 g per day (approximately 1 teaspoon):\n\n● Use less salt during cooking and preparing food and use iodized salt.\n● Check the labels on food and choose products with lower sodium content.\n● Limit processed and prepackaged foods, which can be full of hidden sodium.\n● Remove the salt shaker from the table, and instead use fresh or dried herbs and spices for added flavour.");
+        printf("\n\nAny more queries?(y/n) : ");
+        scanf(" %c", &boolean);
+        if (boolean == 'y')
+        {
+            goto cont;
+        }
+        break;
+    case 13:
+        printf("Ans. On October 22, 2020, the FDA approved the antiviral drug Veklury (remdesivir) for use in adults and pediatric patients (12 years of age and older and weighing at least 40 kg) for the treatment of COVID-19 requiring hospitalization.Veklury should only be administered in a hospital or in a healthcare setting capable of providing acute care comparable to inpatient hospital care.");
+        printf("\n\nAny more queries?(y/n) : ");
+        scanf(" %c", &boolean);
+        if (boolean == 'y')
+        {
+            goto cont;
+        }
+        break;
+    case 14:
+        printf("Ans. The FDA does not recommend that consumers make their own hand sanitizer. If made incorrectly, hand sanitizer can be ineffective, and there have been reports of skin burns from homemade hand sanitizer. The agency lacks verifiable information on the methods being used to prepare hand sanitizer at home and whether they are safe for use on human skin.");
+        printf("\n\nAny more queries?(y/n) : ");
+        scanf(" %c", &boolean);
+        if (boolean == 'y')
+        {
+            goto cont;
+        }
+        break;
+    case 15:
+        printf("Ans. Call your doctor if you experience a serious reaction to hand sanitizer. The FDA encourages consumers and health care professionals to report adverse events experienced with the use of hand sanitizers to the FDA’s MedWatch Adverse Event Reporting program.");
         printf("\n\nAny more queries?(y/n) : ");
         scanf(" %c", &boolean);
         if (boolean == 'y')
