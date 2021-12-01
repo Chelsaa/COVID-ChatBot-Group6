@@ -21,7 +21,7 @@ int meditation()
     printf("\n=====Choose questions from Food and Meditation Category listed below=====\n\n");
 cont:
     printf("\n");
-    printf("1. What are the best food to improve immunity?\n2. Suggest any good medicine for High fever.\n3. Suggest any good medicine for Running Nose (Rhinorrhea).\n4. Suggest any good medicine for Migraine Headache.\n5. Suggest any good medicine for Body Pain.\n6. Suggest any good medicine for difficulty in breathing.\n7. Why do we need Monoclonal Antibody?\n8. Can I get coronavirus from food,food packaging or food containers and preparation area?\n9. To whom I should contact with Drug-Related questions?\n10. Nutrition guidelines for adults during the COVID-19 outbreak.\n11. If a worker in my food processing facility/farm has tested positive for COVID-19, Should I close the facility? If so, for how long?\n12. What are some ways to maintain a healthy diet during the COVID-19 pandemic?\n13. What treatments are available for COVID-19\n14. Can i make my own hand sanitiser?\n15. What do i do if i get a rash or other reaction to hand sanitiser?\n\n16. If you want to go back to main panel.\n\nEnter the number residing with your question : ");
+    printf("1. What are the best food to improve immunity?\n2. Suggest any good medicine for High fever.\n3. Suggest any good medicine for Running Nose (Rhinorrhea).\n4. Suggest any good medicine for Migraine Headache.\n5. Suggest any good medicine for Body Pain.\n6. Suggest any good medicine for difficulty in breathing.\n7. Why do we need Monoclonal Antibody?\n8. Can I get coronavirus from food,food packaging or food containers and preparation area?\n9. To whom I should contact with Drug-Related questions?\n10. Nutrition guidelines for adults during the COVID-19 outbreak.\n11. If a worker in my food processing facility/farm has tested positive for COVID-19, Should I close the facility? If so, for how long?\n12. What are some ways to maintain a healthy diet during the COVID-19 pandemic?\n13. What treatments are available for COVID-19\n14. Can i make my own hand sanitiser?\n15. What do i do if i get a rash or other reaction to hand sanitiser?\n\n> If you want to go back to main panel, Press 0\n> Enter the number residing with your question : ");
     scanf("%d", &input);
     switch (input)
     {
@@ -163,8 +163,8 @@ cont:
             goto cont;
         }
         break;
-    case 16:
-        printf("Okay! Going back to main panel");
+    case 0:
+        printf("\nOkay! Going back to main panel\n");
         main();
     default:
         printf("\n>> Choose number corresponding to the relevant question\n");

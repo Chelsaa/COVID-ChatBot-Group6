@@ -20,7 +20,7 @@ int homecare_1()
     printf("\n=====Choose questions from Home Care Category listed below=====\n\n");
 cont:
     printf("\n");
-    printf("1. Till what minimum oxygen saturation level value can covid patients be treated at home?\n2. What are the emergency warning signs can be experienced for COVID Patients?\n3. Which preventions can help to prevent the spread of infection with the COVID-19 virus?\n4. When we can help up with ending isolation or quarantine of any person at home?\n5. Can we stay with COVID Patients at home?\n6. Advice for health workers providing care in a private home.\n7. When and how to clean surfaces and objects?\n8. Emergency Number to call, when having trouble in breathing?\n9. Precautionary measures for yourself while caring for someone with COVID-19.\n10. How we can cope with caregiving stress? \n11. Immunity Boosting Herbs To Beat COVID-19.\n12. Which test are available for covid 19 at home and it's available cities.\n13. Are there any COVID-19-specific therapies available for non-hospitalized patients?\n14. What is the significance of a persistently positive RT-PCR for weeks after illness?\n15. What are the other things the patient should do to enable proper breathing?\n\n16. If you want to go back to main panel.\n\nEnter the number residing with your question : ");
+    printf("1. Till what minimum oxygen saturation level value can covid patients be treated at home?\n2. What are the emergency warning signs can be experienced for COVID Patients?\n3. Which preventions can help to prevent the spread of infection with the COVID-19 virus?\n4. When we can help up with ending isolation or quarantine of any person at home?\n5. Can we stay with COVID Patients at home?\n6. Advice for health workers providing care in a private home.\n7. When and how to clean surfaces and objects?\n8. Emergency Number to call, when having trouble in breathing?\n9. Precautionary measures for yourself while caring for someone with COVID-19.\n10. How we can cope with caregiving stress? \n11. Immunity Boosting Herbs To Beat COVID-19.\n12. Which test are available for covid 19 at home and it's available cities.\n13. Are there any COVID-19-specific therapies available for non-hospitalized patients?\n14. What is the significance of a persistently positive RT-PCR for weeks after illness?\n15. What are the other things the patient should do to enable proper breathing?\n\n> If you want to go back to main panel, Press 0\n> Enter the number residing with your question : ");
     scanf("%d", &input);
     switch (input)
     {
@@ -162,8 +162,8 @@ cont:
             goto cont;
         }
         break;
-    case 16:
-        printf("Okay! Going back to main panel");
+    case 0:
+        printf("\nOkay! Going back to main panel\n");
         main();
     default:
         printf("\n>> Choose number corresponding to the relevant question\n");
