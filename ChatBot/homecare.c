@@ -10,17 +10,17 @@
 
 // Defining the homecare_1 function which replies
 // to queries regarding homecare questions.
-
+int main(void);
 int homecare_1()
 {
     int input;
     char boolean;
-    char *str[] = {"Kollam", "Dhanbad", "Perumbavoor", "Trichy","Navsari", "Madurai", "Darbhanga", "Nashik", "Ludhiana", "Muktsar", "Nagpur","Salem", "Sirsa"};
+    char *str[] = {"Kollam", "Dhanbad", "Perumbavoor", "Trichy", "Navsari", "Madurai", "Darbhanga", "Nashik", "Ludhiana", "Muktsar", "Nagpur", "Salem", "Sirsa"};
 
     printf("\n=====Choose questions from Home Care Category listed below=====\n\n");
 cont:
     printf("\n");
-    printf("1. Till what minimum oxygen saturation level value can covid patients be treated at home?\n2. What are the emergency warning signs can be experienced for COVID Patients?\n3. Which preventions can help to prevent the spread of infection with the COVID-19 virus?\n4. When we can help up with ending isolation or quarantine of any person at home?\n5. Can we stay with COVID Patients at home?\n6. Advice for health workers providing care in a private home.\n7. When and how to clean surfaces and objects?\n8. Emergency Number to call, when having trouble in breathing?\n9. Precautionary measures for yourself while caring for someone with COVID-19.\n10. How we can cope with caregiving stress? \n11. Immunity Boosting Herbs To Beat COVID-19.\n12. Which test are available for covid 19 at home and it's available cities.\n13. Are there any COVID-19-specific therapies available for non-hospitalized patients?\n14. What is the significance of a persistently positive RT-PCR for weeks after illness?\n15. What are the other things the patient should do to enable proper breathing?\n\nEnter the number residing with your question : ");
+    printf("1. Till what minimum oxygen saturation level value can covid patients be treated at home?\n2. What are the emergency warning signs can be experienced for COVID Patients?\n3. Which preventions can help to prevent the spread of infection with the COVID-19 virus?\n4. When we can help up with ending isolation or quarantine of any person at home?\n5. Can we stay with COVID Patients at home?\n6. Advice for health workers providing care in a private home.\n7. When and how to clean surfaces and objects?\n8. Emergency Number to call, when having trouble in breathing?\n9. Precautionary measures for yourself while caring for someone with COVID-19.\n10. How we can cope with caregiving stress? \n11. Immunity Boosting Herbs To Beat COVID-19.\n12. Which test are available for covid 19 at home and it's available cities.\n13. Are there any COVID-19-specific therapies available for non-hospitalized patients?\n14. What is the significance of a persistently positive RT-PCR for weeks after illness?\n15. What are the other things the patient should do to enable proper breathing?\n\n16. If you want to go back to main panel.\n\nEnter the number residing with your question : ");
     scanf("%d", &input);
     switch (input)
     {
@@ -123,10 +123,10 @@ cont:
             goto cont;
         }
         break;
-    case 12:    
+    case 12:
         for (int i = 0; i < 13; ++i)
         {
-            printf("\n# %s",str[i]);
+            printf("\n# %s", str[i]);
         }
         printf("\n\nAny more queries?(y/n) : ");
         scanf(" %c", &boolean);
@@ -135,7 +135,7 @@ cont:
             goto cont;
         }
         break;
-   case 13:
+    case 13:
         printf("Monoclonal antibody therapies targeting SARS-CoV-2 are available for the treatment of non-hospitalized adults\n(=18 years of age) and children (=12 years of age weighing at least 40 kg) with mild to moderate COVID-19 and specific risk factors for severe disease.");
         printf("\n\nAny more queries?(y/n) : ");
         scanf(" %c", &boolean);
@@ -144,7 +144,7 @@ cont:
             goto cont;
         }
         break;
-   case 14:
+    case 14:
         printf("Patients diagnosed with COVID-19 can have detectable SARS-CoV-2 RNA in upper respiratory tract specimens for weeks after the onset of symptoms. However, prolonged viral RNA detection does not necessarily indicate prolonged infectiousness. According to the CDC, isolation of infectious virus more than 10 days after illness onset is rare in patients whose symptoms have resolved.\n\nHowever, such patients are generally felt to have low infectiousness, particularly after mild to moderate disease and in the absence of immunocompromise.");
         printf("\n\nAny more queries?(y/n) : ");
         scanf(" %c", &boolean);
@@ -162,6 +162,9 @@ cont:
             goto cont;
         }
         break;
+    case 16:
+        printf("Okay! Going back to main panel");
+        main();
     default:
         printf("\n>> Choose number corresponding to the relevant question\n");
         goto cont;

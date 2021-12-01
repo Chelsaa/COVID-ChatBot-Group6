@@ -2,15 +2,16 @@
  * NCU-UAG COLLABORATIVE C PROJECT
  * GROUP: 6
  * COPYRIGHT © GROUP 6
-*/
+ */
 
 #include <stdio.h>
-#include "hospital.c" // Importing the hospital script
-#include "homecare.c" // Importing the homecare script
+#include "hospital.c"            // Importing the hospital script
+#include "homecare.c"            // Importing the homecare script
 #include "food-and-meditation.c" // Importing food and meditation script
-#include "admin.c" // Importing admin portal script
+#include "admin.c"               // Importing admin portal script
 
-int main(){
+int main()
+{
     int userInput;
 
     // Setting up the home page of the bot
@@ -25,37 +26,43 @@ int main(){
     // If input is not any of the mentioned number, the loop will
     // end the user will automatically exit the bot.
 
-    while (userInput == 1 || userInput == 2 || userInput == 3 || userInput == 4){
-        
-        // Running the hospital questions script if user input is 1 
-        
-        if (userInput == 1){
+    while (userInput == 1 || userInput == 2 || userInput == 3 || userInput == 4)
+    {
+
+        // Running the hospital questions script if user input is 1
+
+        if (userInput == 1)
+        {
             hospital_1();
             break;
         }
 
         // Running the home care question script if the user input is 2
 
-        else if (userInput == 2){
+        else if (userInput == 2)
+        {
             homecare_1();
             break;
         }
 
         // Running the food and medicine question script if user input is 3
 
-        else if (userInput == 3){
+        else if (userInput == 3)
+        {
             meditation();
             break;
         }
 
         // Admin portal
 
-        else if (userInput == 4){
+        else if (userInput == 4)
+        {
             adminPortal();
             break;
         }
 
-        else{
+        else
+        {
             break;
         }
     }
