@@ -1,0 +1,33 @@
+			HOSPITALS
+
+Q1. Which hospital has vacant beds within 10 km of the city?
+A1.     - Indraprastha Apollo Hospitals, New Delhi.
+	- Delhi Hospital and Nursing Home.
+	- Delhi Hospital.
+
+Q2. Is a negative covid test report required to visit the hospital for other OPD?
+A2.	- No, if it's neccessary the hospital will do the test.
+
+Q3. Is it possible to visit people hospitalized for covid?
+A3.     -  No, we don't want the virus to spread any more.
+
+Q4. What is the schedule for attention at the hospitals?
+A4.     - 24/7.
+
+Q5. What are the safety and hygiene measures in the hospital?
+A5.     - Hospitals comply with all guidelines established by the government.
+
+Q6. Do the hospitals have post-covid treatment?
+A6.     - No, just pattients with covid 19.
+
+Q7. Are hospitals vaccinating?
+A7.     - Yes, some hospitals are vaccinating during normal business hours.
+
+Q8. How can i request a medical consultation?
+A8.     - They can be done by phone or through the website.
+
+Q9. Does the hospital provide the medications?
+A9.     - Yes, they provide medications, but they are limited.
+
+Q10. Is an appointment necessary to be seen?
+A10.    - Yes, for specialty consultations it is necessary to schedule an appointment, however it is not necessary in the emergency room.
