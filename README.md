@@ -14,9 +14,7 @@
 
 ## About the chatbot
 
-As we all know, the world has recently suffered a massive breakdown due to a pandamic. During this pandemic, technology played vital role is helping people socialise, educate, work and most importantly clear the doubts regarding the disease. AI powered chatbots have made a significant role in managing patient's needs during the pandemic. We have prepared one such ChatBot that answers all the necessary information about COVID-19 to the patient.
-
-Kindly Obey [License.](https://github.com/Chelsaa/COVID-ChatBot-Group6/blob/main/LICENSE)
+As we all know, the world has recently suffered a massive breakdown due to a pandamic. During this pandemic, technology played vital role is helping people socialise, educate, work and most importantly clear the doubts regarding the disease. AI powered chatbots have made a significant role in managing patient's needs during the pandemic. We have prepared one such ChatBot that answers all the necessary information about COVID-19 to the patient.If you decide to edit, compile, or use this code in any way, please respect the [License.](https://github.com/Chelsaa/COVID-ChatBot-Group6/blob/main/LICENSE)
 
 Click here to see the ChatBot in action.
 
