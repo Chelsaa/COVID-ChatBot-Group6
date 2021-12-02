@@ -77,7 +77,7 @@ adminLogin:
     printf("\n=====ADMIN PORTAL LOGIN=====\n\n");
     printf("Enter userID : "); // Requesting for userID from the user
     gets(username);
-    printf("\nEnter PIN : "); // Requesting for the PIN from the user
+    printf("Enter PIN : "); // Requesting for the PIN from the user
     gets(pin);
     int c = getc(fptr);
     while (c != EOF) // Will read file till end of the file.
