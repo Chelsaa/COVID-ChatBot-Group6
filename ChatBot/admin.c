@@ -43,6 +43,7 @@ int adminRegistration()
             printf("Admin added succesfully!!!");
         }
     }
+    return 0;
 }
 
 // Designing the main menu of the admin portal
@@ -63,6 +64,7 @@ int adminMainMenu()
         printf("\nGoing back to main panel");
         main(); // Main function callout
     }
+    return 0;
 }
 
 int adminPortal()
@@ -104,4 +106,5 @@ adminLogin:
     }
 
     fclose(fptr);
+    return 0;
 }
