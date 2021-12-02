@@ -5,16 +5,16 @@
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h> // For strcmp()
 
-void adminRegistration()
+int adminRegistration()
 {
-
-    char username[8], getUsername[8], getPin[4], pin[4];
+    char username[25], getUsername[25], getPin[25], pin[25];
     FILE *fptr; // File pointer
 
     // Opening the txt file having login data
-    fptr = fopen("adminData.txt", "a+");
+    fptr = fopen("adminData.txt", "a");
 
     if (fptr == NULL)
     {
@@ -23,15 +23,15 @@ void adminRegistration()
     else
     {
     adminRegister:
-        printf("Enter 8 digit userID: "); // Requesting for a uniform 8 digit userId for registration
+        printf("Enter username : "); // Requesting for a uniform userId for registration
         scanf("%s", username);
 
-        printf("Enter a 4 digit login PIN: "); // Requesting a uniform 4 digit PIN
+        printf("Enter your PIN : "); // Requesting a uniform digit PIN
         scanf("%s", pin);
 
         fscanf(fptr, "%s %s", getUsername, getPin);
 
-        if ((strcmp(username, getUsername) == 0))
+        if ((strcmp(getUsername, username) == 0))
         {
             printf("Username already taken. Please try again."); // Printing an error in case the user ID is already taken
             goto adminRegister;
@@ -39,19 +39,18 @@ void adminRegistration()
 
         else
         {
-            fprintf(fptr, "%s %s\n", username, pin); // Dumping all fetched details into "loginData.txt" file
+            fprintf(fptr, "%s %s", username, pin); // Dumping all fetched details into "adminData.txt" file
             printf("Admin added succesfully!!!");
         }
     }
-    fclose(fptr);
 }
 
 // Designing the main menu of the admin portal
-void adminMainMenu()
+int adminMainMenu()
 {
 
     int userChoice;
-    printf("\n=====MAIN MENU=====\n\n1. Add a new admin\n\nYour choice: ");
+    printf("\n=====MAIN MENU=====\n\n1. Add a new admin\n2. Go Back to Main\n\nYour choice: ");
     scanf("%d", &userChoice);
 
     if (userChoice == 1)
@@ -59,35 +58,38 @@ void adminMainMenu()
         printf("\n=====NEW ADMIN REGISTRATION=====\n\n");
         adminRegistration();
     }
+    else if (userChoice == 2)
+    {
+        printf("\nGoing back to main panel");
+        main();
+    }
+    
 }
 
-void adminPortal()
+int adminPortal()
 {
 
-    char userID[8], getUID[8], getPin[4], pin[4];
-    int flag = 0;
     FILE *fptr; // File pointer
+    fptr = fopen("adminData.txt", "r");
+    char username[25], getUsername[25], getPin[25], pin[25];
+    int flag = 0;
 
-    fptr = fopen("adminData.txt", "rb");
-    fscanf(fptr, "%s %s", getUID, getPin); // Reading userID and password from the file
+    fscanf(fptr, "%s%s", getUsername, getPin); // Reading userID and password from the file
 adminLogin:
     printf("\n=====ADMIN PORTAL LOGIN=====\n\n");
-    printf("Enter userID: "); // Requesting for userID from the user
-    scanf("%s", userID);
-
-    printf("Enter PIN: "); // Requesting for the PIN from the user
-    scanf("%s", pin);
-
-    if (strcmp(userID, getUID) == 0)
+    printf("Enter userID : "); // Requesting for userID from the user
+    gets(username);
+    printf("\nEnter PIN : "); // Requesting for the PIN from the user
+    gets(pin);
+    if ((strcmp(getUsername, username) == 0) && (strcmp(getPin, pin) == 0))
     {
-        if (strcmp(pin, getPin) == 0)
-            printf("Login succesful!!!");
+        printf("Login succesful!!!");
         adminMainMenu();
     }
     else
     {                    // A user has maximum of 3 attempts to login.
         flag += 1;       // In case the user reaches maximum attempts,
-        while (flag < 3) // the loop breaks and user will have to run
+        while (flag <= 3) // the loop breaks and user will have to run
         {                // the bot again.
             printf("Incorrect input. Please try again.\n\n");
             goto adminLogin;
