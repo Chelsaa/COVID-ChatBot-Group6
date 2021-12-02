@@ -39,7 +39,7 @@ int adminRegistration()
 
         else
         {
-            fprintf(fptr, "%s %s", username, pin); // Dumping all fetched details into "adminData.txt" file
+            fprintf(fptr, "\n%s %s", username, pin); // Dumping all fetched details into "adminData.txt" file
             printf("Admin added succesfully!!!");
         }
     }
@@ -63,38 +63,45 @@ int adminMainMenu()
         printf("\nGoing back to main panel");
         main();
     }
-    
 }
 
 int adminPortal()
 {
-
+    fflush(stdin);
     FILE *fptr; // File pointer
     fptr = fopen("adminData.txt", "r");
     char username[25], getUsername[25], getPin[25], pin[25];
-    int flag = 0;
+    int flag = 0,login_successful=0;
 
-    fscanf(fptr, "%s%s", getUsername, getPin); // Reading userID and password from the file
 adminLogin:
     printf("\n=====ADMIN PORTAL LOGIN=====\n\n");
     printf("Enter userID : "); // Requesting for userID from the user
     gets(username);
     printf("\nEnter PIN : "); // Requesting for the PIN from the user
     gets(pin);
-    if ((strcmp(getUsername, username) == 0) && (strcmp(getPin, pin) == 0))
+    int c = getc(fptr);
+    while (c != EOF) // Will read file till end of the file.
     {
-        printf("Login succesful!!!");
-        adminMainMenu();
+        fscanf(fptr, "%s%s", getUsername, getPin); // Reading userID and password from the file
+        if ((strcmp(getUsername, username) == 0) && (strcmp(getPin, pin) == 0))
+        {
+            printf("Login succesful!!!");
+            adminMainMenu();
+            login_successful = 1;
+            break;
+        }
+        c = getc(fptr);
     }
-    else
-    {                    // A user has maximum of 3 attempts to login.
-        flag += 1;       // In case the user reaches maximum attempts,
+    if (login_successful == 0)
+    {
+        flag += 1;        // In case the user reaches maximum attempts,
         while (flag <= 3) // the loop breaks and user will have to run
-        {                // the bot again.
+        {                 // the bot again.
             printf("Incorrect input. Please try again.\n\n");
             goto adminLogin;
         }
         printf("Maximum attempts reached. Please try again later.");
     }
+    
     fclose(fptr);
 }
