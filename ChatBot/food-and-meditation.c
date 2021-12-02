@@ -6,9 +6,9 @@
 
 #include <stdio.h>
 
+int main(void); // Used to call out main function without workflow.
 // Defining the meditation function which replies
 // to queries regarding food and meditation questions.
-int main(void);
 int meditation()
 {
     int input;

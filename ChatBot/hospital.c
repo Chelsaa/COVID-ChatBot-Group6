@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-int main(void);
+int main(void); // Used to call out main function without workflow.
 int hospital_1()
 {
     int input;

@@ -14,7 +14,7 @@ int adminRegistration()
     FILE *fptr; // File pointer
 
     // Opening the txt file having login data
-    fptr = fopen("adminData.txt", "a");
+    fptr = fopen("adminData.txt", "a"); // Appending adminData.txt after admin registration.
 
     if (fptr == NULL)
     {
@@ -61,17 +61,17 @@ int adminMainMenu()
     else if (userChoice == 2)
     {
         printf("\nGoing back to main panel");
-        main();
+        main(); // Main function callout
     }
 }
 
 int adminPortal()
 {
     fflush(stdin);
-    FILE *fptr; // File pointer
-    fptr = fopen("adminData.txt", "r");
+    FILE *fptr;                         // File pointer
+    fptr = fopen("adminData.txt", "r"); // Reading adminData.txt
     char username[25], getUsername[25], getPin[25], pin[25];
-    int flag = 0,login_successful=0;
+    int flag = 0, login_successful = 0;
 
 adminLogin:
     printf("\n=====ADMIN PORTAL LOGIN=====\n\n");
@@ -83,7 +83,7 @@ adminLogin:
     while (c != EOF) // Will read file till end of the file.
     {
         fscanf(fptr, "%s%s", getUsername, getPin); // Reading userID and password from the file
-        if ((strcmp(getUsername, username) == 0) && (strcmp(getPin, pin) == 0))
+        if ((strcmp(getUsername, username) == 0) && (strcmp(getPin, pin) == 0)) // Checking whether username and pin is correct from adminData.txt
         {
             printf("Login succesful!!!");
             adminMainMenu();
@@ -102,6 +102,6 @@ adminLogin:
         }
         printf("Maximum attempts reached. Please try again later.");
     }
-    
+
     fclose(fptr);
 }

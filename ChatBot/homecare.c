@@ -8,9 +8,9 @@
 #include <string.h>
 #include <stdlib.h>
 
+int main(void); // Used to call out main function without workflow.
 // Defining the homecare_1 function which replies
 // to queries regarding homecare questions.
-int main(void);
 int homecare_1()
 {
     int input;
